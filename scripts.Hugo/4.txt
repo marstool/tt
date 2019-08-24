@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ls *.mp4 *.json |xargs -n 1 /bin/rename_fix_special_chat.sh low
+ls *.mp4 *.mkv |xargs -n 1 /bin/gen_index.from.mp4.to.mp3.sh
+
+ls *.mp4 *.mp3 *.mkv| xargs -n 1 /bin/gen_index.and.create.dir.for.hugo.mp4mkvmp3.sh
+
+echo ; echo must run in content : ; echo "      ls -d 20*/ |xargs -n 1 /bin/gen_index.json.title.decript.sh"
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for aa1 in 20*/ 
+do
+    echo ${aa1}
+	nice -n 19 git add ${aa1}
+	nice -n 19 git commit -a -m "${aa1}"
+	nice -n 19 git push -u origin master
+
+done
+

@@ -1,0 +1,40 @@
+baseURL = "/"
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = " tt.jjj123.com 民主救国阵线twitter 替代方案 "
+theme = "hugo-theme-docdock"
+#themesdir = "../.."
+themesdir = "./themes"
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+
+
+[params]
+topsite00 = "https://www.jjj123.com"
+seqsite01 = "https://tt.jjj123.com"
+#ytsite01 = "https://www.youtube.com/channel/UCeBfK3zzgqDQLhBovmguOuQ"
+ytsite01 = "UCeBfK3zzgqDQLhBovmguOuQ"
+editURL = ""
+showVisitedLinks = true # default is false
+## themeStyle = "flex" # "original" or "flex" # default "flex"
+themeStyle = "original" # "original" or "flex" # default "flex"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = true # default is false
+disableSearch = true # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = true # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+enableGitInfo = false
+
+[outputs]
+#home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML" ]
+
+
