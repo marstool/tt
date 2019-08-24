@@ -6,6 +6,12 @@ weight = 20
 
 
 
+* [  a1021 创建账户  ]({{< relref "a1021_create_account" >}})
+
+
+* [  a101 movim 使用教程  ]({{< relref "a101_how_to_use_movim" >}})
+
+
 * [  a002 推特大屠杀后唐先生决定寻找twitter的替代方案  ]({{< relref "a002_twitter_massacre" >}})
 
 
