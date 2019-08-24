@@ -12,6 +12,8 @@ text=" GFW经常升级，升级后也许你找不到组织。 如果发生这种
 {{< mydiv 
 text=" 所以，你只要输入 www.jjj123.com 就可以找回组织。"
 >}}
+
+<br><br>
 {{< mydiv3 link="https://tt.jjj123.com " text=" 民主救国阵线twitter 替代方案 " >}}
 {{< mydiv3 link="https://tbq.jjj123.com" text="唐柏桥youtube系列github免翻墙版本">}}
 {{< mydiv3 link="https://www.jjj123.com" text="主站" >}}
