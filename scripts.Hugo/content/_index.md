@@ -9,6 +9,9 @@ weight = 20
 * [  a1099 注意事项  ]({{< relref "a1099_warning" >}})
 
 
+* [  a1061 客户端 APP  ]({{< relref "a1061_apps" >}})
+
+
 * [  a1052 建立私聊群组  ]({{< relref "a1052_create_chat_group" >}})
 
 
