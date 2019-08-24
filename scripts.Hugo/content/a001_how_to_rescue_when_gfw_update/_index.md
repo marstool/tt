@@ -7,7 +7,7 @@ weight = 20
 
 
 {{< mydiv 
-text=" GFW经常升级，升级后也许你找不到组织。 如果发生这种情况，请记住 jjj123 。 因为这个域名挂在 github 服务器上， 虽然github 免费给我们提供服务， 但是，共匪惹不起 github 的各路大神。 "
+text=" GFW经常升级，升级后也许你找不到组织。 如果发生这种情况，请记住 jjj123 。 因为这个域名挂在 github 服务器上， 虽然github 免费给我们提供服务， 但是，GFW惹不起 github 的各路大神。 "
 >}}
 {{< mydiv 
 text=" 所以，你只要输入 www.jjj123.com 就可以找回组织。"
