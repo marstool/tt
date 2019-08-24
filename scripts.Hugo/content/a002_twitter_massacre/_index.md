@@ -30,7 +30,7 @@ text=" 由于民主救国阵线的资源有限，初期先使用公开服务器�
 {{< mydiv2 text="movim 的源代码在：  " link="https://github.com/movim/movim/releases" >}}
 
 <br>
-{{< mydiv text="鸣谢：" >}}
+{{< mydiv text="========= 致谢 ========" >}}
 {{< mydiv text="谢谢 movim" >}}
 {{< mydiv text="谢谢 github" >}}
 {{< mydiv text="谢谢开源世界" >}}
