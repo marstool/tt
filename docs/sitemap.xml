@@ -19,7 +19,39 @@
   </url>
   
   <url>
-    <loc>/a1021_create_account/</loc>
+    <loc>/a1021_movim_website/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1022_create_account/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1023_fill_info/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1024_create_succeed/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1031_login/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1041_post_news/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1051_add_contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1052_create_chat_group/</loc>
+  </url>
+  
+  <url>
+    <loc>/a1099_warning/</loc>
   </url>
   
   <url>
