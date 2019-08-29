@@ -44,3 +44,9 @@ weight = 20
 
 * [  a1099 注意事项  ]({{< relref "a1099_warning" >}})
 
+
+* [  a2001 XMPP 研究历程  ]({{< relref "a2001_xmpp_study" >}})
+
+
+* [  a2101_metronome_im ]({{< relref "a2101_metronome_im" >}})
+
