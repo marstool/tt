@@ -21,9 +21,8 @@ link="https://xmpp.org/software/servers.html"
 
 <tr><td>IoT Broker	            </td><td>Windows     </td></tr>
 
-<tr><td>{{<mylink text="Isode M-Link" link="https://www.isode.com/">}}</td><td>no source : Linux / Windows </td></tr>
-
-<tr><td>XEP-0124: bosh source   </td><td>{{< mydiv2 link="https://www.isode.com/products/m-link.html" >}}     </td></tr>
+<tr><td>{{<mylink text="Isode M-Link" link="https://www.isode.com/">}}</td><td>no source : Linux / Windows 
+{{<mylink text="XEP-0124: bosh source"   link="https://www.isode.com/products/m-link.html" >}}     </td></tr>
 
 <tr><td>jackal	                </td><td>Linux / macOS     </td></tr>
 <tr><td>Metronome IM	        </td><td>Linux     </td></tr>
