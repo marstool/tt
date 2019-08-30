@@ -42,11 +42,19 @@ link="https://xmpp.org/extensions/xep-0124.html" >}}
 link="https://prosody.im/doc/xeplist"
 >}}
 
+{{< mydiv2 text="s2. Erlang : ejabberd on github"
+link="https://github.com/processone/ejabberd"
+>}}
+
 * How to
 
 {{< mydiv2 text="h1 . How to set up your own private instant messaging server " 
 link="https://arstechnica.com/information-technology/2014/03/how-to-set-up-your-own-private-instant-messaging-server/" 
 >}}
+{{< mydiv2 text="h2 . public xmpp list : Public XMPP Server Directory"
+link="https://xmpp.net/directory.php"
+>}}
+
 
 
 

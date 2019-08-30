@@ -38,6 +38,8 @@ gs:
 	nice -n 19 git status
 gc:
 	nice -n 19 git commit -a
+gcX:
+	nice -n 19 git commit -m $$(LC_ALL=C date +"%Y%m%d_%H%M%p" )
 	
 
 gd :
@@ -51,46 +53,6 @@ rp:
 	nice -n 19 git config pack.packSizeLimit 20m
 
 
-existHugo:=$(strip $(firstword $(wildcard scripts.Hugo/config.toml config.toml)))
-
-$(if $(existHugo),$(eval UseHugo:=1),$(eval UseTree:=1))
-
-############################################### UseHugo  start
-############################################### UseHugo  start
-############################################### UseHugo  start
-ifdef    UseHugo
-
-rg:regen
-regen:
-	[ -f scripts.Hugo/config.toml ] && make regenX -C scripts.Hugo || make regenX 
-#	[ -d themes ] || echo "you should run : git clone https://marstool@github.com/marstool/themes.git"
-#	[ -d themes ] || git clone https://marstool@github.com/marstool/themes.git
-regenX:
-	[ -d themes ] || rsync -a ../../themes/  themes/
-	cd themes && git pull
-	[ -L public ] || ln -s ../public/
-	rm -fr public/*
-	rm -fr resources/_gen/*
-	cp ../CNAME public/
-	[ -f public/CNAME ] || ( echo ; echo "why no CNAME ? exit" ; echo ; exit 32 )
-	nice -n 19 hugo
-
-s : server
-server:
-	[ -d themes ] || echo "you should run : git clone https://marstool@github.com/marstool/themes.git"
-	[ -f scripts.Hugo/config.toml ] && make serverX -C scripts.Hugo || make serverX 
-serverX:
-	nice -n 19 hugo server --disableFastRender
-#	nice -n 19 hugo server
-
-# hddps://themes.gohugo.io/
-# hddps://gohugo.io/themes/
-
-s2: server2
-server2:
-	[ -f scripts.Hugo/config.toml ] && make server2X -C scripts.Hugo || make server2X 
-server2X:
-	cd public/ && python -m SimpleHTTPServer 33221
 
 
 define help_textHU
@@ -100,70 +62,87 @@ define help_textHU
 	s2 -> server2 : run python server to test local
 
 endef
-export help_textHU
 
 
-endif
-############################################### UseHugo  end
-############################################### UseHugo  end
-############################################### UseHugo  end
+testHugo1:=$(strip $(firstword $(wildcard scripts.Hugo/config.toml)))
+testHugo2:=$(strip $(firstword $(wildcard config.toml)))
+testHugo3:=$(strip $(firstword $(wildcard hugo-theme-docdock/theme.toml)))
 
+$(if $(testHugo1),$(eval UseHugoOnTop:=1),\
+	$(if $(testHugo2),$(eval UseHugoUnderScript:=1),\
+	$(if $(testHugo3),$(eval UseInTheme:=1),$(error "not_fit_dir"))\
+	))
 
-############################################### UseTree  start
-############################################### UseTree  start
-############################################### UseTree  start
-ifdef UseTree
+############################################### UseHugoOnTop  start
+############################################### UseHugoOnTop  start
+############################################### UseHugoOnTop  start
+ifdef    UseHugoOnTop
+$(info using    UseHugoOnTop)
 
-gen00:
-	tree -H '.' -L 1 --noreport --charset utf-8 > index.html
-
-tg: treeGen
-treeGen:
-	cd public/ && rm -f CNAME index.html
-	[   -f index.html ] || (cd public/ && tree -H '.' --noreport --charset utf-8 > index.html)
-	[ ! -f index.html ] || (cat index.html > public/index.html)
-	make sed01
+rg:regen
+regen:
+	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_33 file <scripts.Hugo/config.toml> exist ?" ; exit 33 )
+	[ -d scripts.Hugo/themes ] || rsync -a ../themes/  scripts.Hugo/themes/
+	@[ -d scripts.Hugo/themes ] || ( echo "why_no_34 dir <scripts.Hugo/themes> exist ?" ; exit 34 )
+	@[ -f scripts.Hugo/themes/hugo-theme-docdock/theme.toml ] || ( echo \
+	     "why_no_36 file <scripts.Hugo/themes/hugo-theme-docdock/theme.toml> exist ?" ; exit 36 )
+	(test -f disable_themes_pull && (echo;echo disable_themes_pull;echo;echo))|| ( cd scripts.Hugo/themes/ && git pull )
+	@[ -d docs ] || mkdir docs
+	@[ -L public ] || ln -s docs/ public
+	@[ -L scripts.Hugo/public ] || ln -s ../public/ scripts.Hugo/
+	rm -fr public/*
+	rm -fr scripts.Hugo/resources/_gen/*
 	cp CNAME public/
-	cat config > .git/config
-	@echo
-	@grep jjj123 CNAME 
-	@echo
-	@grep marstool .git/config
-	@echo
-	diff config .git/config
-	@echo
+	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
+	cd scripts.Hugo/ && nice -n 19 hugo
 
-dynW01:=<h2><a href="https://www.jjj123.com">安全上网教程 www.jjj123.com</a></h2>
-dynW02:=<h3><a href="https://mp3s.jjj123.com">时事见闻 mp3s.jjj123.com</a></h3>
-sed01:
-	sed -i \
-		-e '/meta name=/d' \
-		-e '/ by Steve Baker and Thomas Moore/d' \
-		-e '/ by Francesc Rocher/d' \
-		-e '/ by Florian Sesser/d' \
-		-e '/ by Kyosuke Tokoro/d' \
-		-e 's;<h1>Directory Tree</h1><p>;$(dynW01);g' \
-		-e 's;<title>Directory Tree</title>;<title>https://www.jjj123.com</title>;g' \
-		-e 's;<a href="\.">\.</a><br>;$(dynW02);g' \
-		public/index.html
+s : server
+server:
+	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_41 file <scripts.Hugo/config.toml> exist ?" ; exit 41 )
+	cd scripts.Hugo/ && nice -n 19 hugo server --disableFastRender
 
-s3: server3
-server3:
-	[ -d public ] || (                pwd && python -m SimpleHTTPServer 33221 )
-	[ ! -d public ] || ( cd public && pwd && python -m SimpleHTTPServer 33221 )
+# hddps://themes.gohugo.io/
+# hddps://gohugo.io/themes/
 
-define help_textINDEX
+s2: server2
+server2:
+	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
+	cd public/ && python -m SimpleHTTPServer 33221
 
-	tg --> treeGen -> gen the index.html by tree
-	s3 -> server3 : run python server to test local
 
-endef
-export help_textINDEX
+export help_textHU
+endif
+############################################### UseHugoOnTop  end
+############################################### UseHugoOnTop  end
+############################################### UseHugoOnTop  end
+
+############################################### UseHugoUnderScript begin
+############################################### UseHugoUnderScript begin
+############################################### UseHugoUnderScript begin
+ifdef    UseHugoUnderScript
+$(info using    UseHugoUnderScript )
+
+rg regen     s2 server2     s server :
+	cd .. && make $@
+
+
+export help_textHU
+endif
+############################################### UseHugoUnderScript end
+############################################### UseHugoUnderScript end
+############################################### UseHugoUnderScript end
+
+############################################### UseInTheme begin
+############################################### UseInTheme begin
+############################################### UseInTheme begin
+ifdef    UseInTheme
+$(info using    UseInTheme )
 
 endif
-############################################### UseTree  end
-############################################### UseTree  end
-############################################### UseTree  end
+############################################### UseInTheme end
+############################################### UseInTheme end
+############################################### UseInTheme end
+
 
 
 help_text9=$(if $(help_textTV),$(help_textTV),$(if $(help_textHU),$(help_textHU),$(help_textINDEX)))
