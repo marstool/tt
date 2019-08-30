@@ -6,17 +6,23 @@ weight = 20
 +++
 
 
-{{< mydiv2 
+{{< mylink 
 text=" all source : XMPP.org"
 link="https://xmpp.org/software/servers.html"
 >}}
 
 <table>
-<tr><td>AstraChat	            </td><td>Linux / macOS / Solaris / Windows     </td></tr>
-<tr><td>ejabberd	            </td><td>Linux / macOS / Windows     </td></tr>
+<tr><td>{{<mylink text="AstraChat" link="https://astrachat.com/" >}}
+</td><td>Linux / macOS / Solaris / Windows     </td></tr>
+
+<tr><td>{{<mylink text="ejabberd" link="https://www.ejabberd.im/" >}}
+</td><td>{{<mylink text="Erlang : Linux / macOS / Windows(Github)" link="https://github.com/processone/ejabberd" >}}
+</td></tr>
+
 <tr><td>IoT Broker	            </td><td>Windows     </td></tr>
 
-<tr><td>Isode M-Link	        </td><td>Linux / Windows                  </td></tr>
+<tr><td>{{<mylink text="Isode M-Link" link="https://www.isode.com/">}}</td><td>no source : Linux / Windows </td></tr>
+
 <tr><td>XEP-0124: bosh source   </td><td>{{< mydiv2 link="https://www.isode.com/products/m-link.html" >}}     </td></tr>
 
 <tr><td>jackal	                </td><td>Linux / macOS     </td></tr>
@@ -29,31 +35,34 @@ link="https://xmpp.org/software/servers.html"
 </table>
 
 
-<br>{{< mydiv2 text="XEP-0124: Bidirectional-streams Over Synchronous HTTP" 
+<br>{{< mylink text="XEP-0124: Bidirectional-streams Over Synchronous HTTP" 
 link="https://xmpp.org/extensions/xep-0124.html" >}}     
 
 * Clients on github
-
-{{< mydiv2 text="c1 . Java : xabber-android" link="https://github.com/chinadsfdsf/xabber-android" >}}
+<br>{{< mylink text="c1 . Java : xabber-android" link="https://github.com/chinadsfdsf/xabber-android" >}}
 
 * Server :
-
-{{< mydiv2 text="s1. Lua : prosody.im , XMPP Extensions (XEPs) supported in Prosody"
+<br>{{< mylink text="s1. Lua : prosody.im , XMPP Extensions (XEPs) supported in Prosody"
 link="https://prosody.im/doc/xeplist"
 >}}
-
-{{< mydiv2 text="s2. Erlang : ejabberd on github"
+<br>{{< mylink text="s2. Erlang : ejabberd on github"
 link="https://github.com/processone/ejabberd"
 >}}
 
 * How to
-
-{{< mydiv2 text="h1 . How to set up your own private instant messaging server " 
+<br>{{< mylink text="h1 . How to set up your own private instant messaging server " 
 link="https://arstechnica.com/information-technology/2014/03/how-to-set-up-your-own-private-instant-messaging-server/" 
 >}}
-{{< mydiv2 text="h2 . public xmpp list : Public XMPP Server Directory"
+<br>{{< mylink text="h2 . public xmpp list : Public XMPP Server Directory"
 link="https://xmpp.net/directory.php"
 >}}
+<br>{{< mylink text="h3 . Comparison of XMPP server software"
+link="https://en.wikipedia.org/wiki/Comparison_of_XMPP_server_software"
+>}}
+<br>{{< mylink text="h4 . Comparison of instant messaging clients"
+link="https://en.wikipedia.org/wiki/Comparison_of_instant_messaging_clients#XMPP-related_features"
+>}}
+
 
 
 
