@@ -34,7 +34,20 @@ link="https://xmpp.org/extensions/xep-0124.html" >}}
 
 * Clients on github
 
-{{< mydiv2 text="1 . xabber-android" link="https://github.com/chinadsfdsf/xabber-android" >}}
+{{< mydiv2 text="c1 . Java : xabber-android" link="https://github.com/chinadsfdsf/xabber-android" >}}
+
+* Server :
+
+{{< mydiv2 text="s1. Lua : prosody.im , XMPP Extensions (XEPs) supported in Prosody"
+link="https://prosody.im/doc/xeplist"
+>}}
+
+* How to
+
+{{< mydiv2 text="h1 . How to set up your own private instant messaging server " 
+link="https://arstechnica.com/information-technology/2014/03/how-to-set-up-your-own-private-instant-messaging-server/" 
+>}}
+
 
 
 <br><br><br>
