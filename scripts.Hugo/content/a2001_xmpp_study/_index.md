@@ -32,6 +32,10 @@ link="https://xmpp.org/software/servers.html"
 <br>{{< mydiv2 text="XEP-0124: Bidirectional-streams Over Synchronous HTTP" 
 link="https://xmpp.org/extensions/xep-0124.html" >}}     
 
+* Clients on github
+
+{{< mydiv2 text="1 . xabber-android" link="https://github.com/chinadsfdsf/xabber-android" >}}
+
 
 <br><br><br>
 {{< mydiv3 link="https://tt.jjj123.com " text=" 民主救国阵线twitter 替代方案 " >}}
