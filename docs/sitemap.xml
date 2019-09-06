@@ -27,11 +27,11 @@
   </url>
   
   <url>
-    <loc>/a1023_fill_info/</loc>
+    <loc>/a1026_fill_info/</loc>
   </url>
   
   <url>
-    <loc>/a1024_create_succeed/</loc>
+    <loc>/a1028_create_succeed/</loc>
   </url>
   
   <url>
@@ -55,6 +55,10 @@
   </url>
   
   <url>
+    <loc>/a1098_movim_docker/</loc>
+  </url>
+  
+  <url>
     <loc>/a1099_warning/</loc>
   </url>
   
@@ -63,7 +67,39 @@
   </url>
   
   <url>
+    <loc>/a2002_xmpp_study/</loc>
+  </url>
+  
+  <url>
     <loc>/a2101_metronome_im/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2201_jackal/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2301_fluuxio_go_xmpp/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2401_mellium.im_xmpp/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2501_pubilc_account_create/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2601_web_frontend_salut/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2602_web_frontend_kaiwa/</loc>
+  </url>
+  
+  <url>
+    <loc>/a2603_golang_storage/</loc>
   </url>
   
   <url>

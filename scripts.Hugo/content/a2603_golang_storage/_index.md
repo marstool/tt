@@ -1,15 +1,18 @@
 +++
-title = " a1024 成功创建账户 "
+title = " a2603 golang storage "
 
-description = " a1024 成功创建账户 "
+description = " a2603 golang storage "
 weight = 20
 +++
 
 
-{{< myjpg 
-text=" 如果，所有信息填写正确，你就来到这个页面，表面帐号创建成功。"
-jpg="ss_20190823_165515.jpg"
->}}
+<table>
+
+<tr><td>{{<mylink text="golang storagee" link="https://github.com/gostor/awesome-go-storage#database" >}}
+</td></tr>
+
+</table>
+
 
 
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="hddp://www.w3.org/2005/Atom">
+  <channel>
+    <title> a2602 Kaiwa is an open source web client for XMPP.  on  tt.jjj123.com 民主救国阵线twitter 替代方案 </title>
+    <link>/a2602_web_frontend_kaiwa/</link>
+    <description>Recent content in  a2602 Kaiwa is an open source web client for XMPP.  on  tt.jjj123.com 民主救国阵线twitter 替代方案 </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/a2602_web_frontend_kaiwa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
